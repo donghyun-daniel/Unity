@@ -7,6 +7,7 @@ public class ItemBox : MonoBehaviour
     Renderer myRenderer;
     public Color touchColor;
     Color orgColor;
+    public bool isOverlaped = false;
     void Start()
     {
         myRenderer = GetComponent<Renderer>();
@@ -24,13 +25,25 @@ public class ItemBox : MonoBehaviour
         if (other.tag == "Endpoints")
         {
             myRenderer.material.color = touchColor;
+            isOverlaped = true;
         }
     }
-    private void OnTriggerExit(Collider other)
+
+    void OnTriggerExit(Collider other)
     {
         if (other.tag == "Endpoints")
         {
             myRenderer.material.color = orgColor;
+            isOverlaped = false;
+        }
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Endpoints")
+        {
+            myRenderer.material.color = touchColor;
+            isOverlaped = true;
         }
     }
 }

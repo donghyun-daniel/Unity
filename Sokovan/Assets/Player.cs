@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Rigidbody playerRigidbody;
+    public GameManager gameManager;
 
     float speed = 5f;
 
@@ -17,6 +18,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameManager.isGameOver)
+        {
+            return;
+        }
         //Selected Key at Input Manger
         float inputX = Input.GetAxis("Horizontal");
         float inputZ = Input.GetAxis("Vertical");
