@@ -19,6 +19,15 @@ public class Ball : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius, whatIsProp);
+        for(int i = 0; i < colliders.Length; i++)
+        {
+            Rigidbody targetRigidbody = colliders[i].GetComponent<Rigidbody>();
+            targetRigidbody.AddExplosionForce(explosionForce, transform.position, explosionRadius);
+            Prop targetProp = colliders[i].GetComponent<Prop>();
+            float damage = CalculateDamage(colliders[i].transform.position);
+            targetProp.TakeDamage(damage);
+        }
+
         explosionParticle.transform.parent = null;
         explosionParticle.Play();
         explosionAudio.Play();
@@ -27,7 +36,13 @@ public class Ball : MonoBehaviour
     }
 
     float CalculateDamage(Vector3 targetPosition)
-        {
-            return 0.1f;
-        }
+    {
+        Vector3 explosionToTarget = targetPosition - transform.position;
+        float distance = explosionToTarget.magnitude;
+        float edgeToCenterDistance = explosionRadius - distance;
+        float percentage = edgeToCenterDistance / explosionRadius;
+        float damage = percentage * maxDamage;
+        damage = Mathf.Max(0, damage);
+        return damage;
+    }
 }
