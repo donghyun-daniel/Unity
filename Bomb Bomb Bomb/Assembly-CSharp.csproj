@@ -62,9 +62,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Ball.cs" />
-    <Compile Include="Assets\Cannon.cs" />
-    <Compile Include="Assets\CannonRotator.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
@@ -73,7 +70,11 @@
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\Prop.cs" />
+    <Compile Include="Assets\Script\Ball.cs" />
+    <Compile Include="Assets\Script\Cannon.cs" />
+    <Compile Include="Assets\Script\CannonRotator.cs" />
+    <Compile Include="Assets\Script\Prop.cs" />
+    <Compile Include="Assets\Script\SpawnGenerator.cs" />
     <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/GitHub/Unity/Bomb Bomb Bomb/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
