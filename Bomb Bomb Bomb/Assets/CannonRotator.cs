@@ -13,6 +13,8 @@ public class CannonRotator : MonoBehaviour
     public float verticalRotateSpeed = 180f;
     public float horizontalRotateSpeed = 180f;
 
+    public Cannon cannon;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,11 +52,21 @@ public class CannonRotator : MonoBehaviour
                 else if (Input.GetButtonUp("Fire1"))
                 {
                     state = RotateState.Ready;
+                    cannon.enabled = true;
                 }
                 break;
             case RotateState.Ready:
+                state = RotateState.Ready;
+                cannon.enabled = true;
                 break;
         }
-        
+    }
+
+
+    private void OnEnable()
+    {
+        transform.rotation = Quaternion.identity; //It mean 0,0,0 rotation
+        state = RotateState.Idle;
+        cannon.enabled = false;
     }
 }

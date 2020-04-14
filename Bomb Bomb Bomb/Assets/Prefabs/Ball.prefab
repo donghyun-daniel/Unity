@@ -4715,7 +4715,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634650488909435208}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 155196676257425260}
@@ -4816,9 +4816,9 @@ MonoBehaviour:
   explosionParticle: {fileID: 3463889739268518579}
   explosionAudio: {fileID: 4358119985992656863}
   maxDamage: 100
-  explosionForce: 100
+  explosionForce: 1000
   lifeTime: 10
-  explosionRadius: 10
+  explosionRadius: 20
 --- !u!1 &4274273263901772663
 GameObject:
   m_ObjectHideFlags: 0

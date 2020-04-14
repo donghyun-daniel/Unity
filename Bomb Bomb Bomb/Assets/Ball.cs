@@ -8,7 +8,7 @@ public class Ball : MonoBehaviour
     public ParticleSystem explosionParticle;
     public AudioSource explosionAudio;
     public float maxDamage = 100f;
-    public float explosionForce = 100f;
+    public float explosionForce = 1000f;
     public float lifeTime = 10f;
     public float explosionRadius = 10f;
 
