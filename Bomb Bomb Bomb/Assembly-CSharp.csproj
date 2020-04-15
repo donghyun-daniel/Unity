@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CamFollow.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\Script\Ball.cs" />
     <Compile Include="Assets\Script\Cannon.cs" />
     <Compile Include="Assets\Script\CannonRotator.cs" />

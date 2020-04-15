@@ -9,13 +9,14 @@ public class Ball : MonoBehaviour
     public AudioSource explosionAudio;
     public float maxDamage = 100f;
     public float explosionForce = 1000f;
-    public float lifeTime = 10f;
+    public float lifeTime = 8f;
     public float explosionRadius = 10f;
 
     void Start()
     {
         Destroy(gameObject, lifeTime);
     }
+
     private void OnTriggerEnter(Collider other)
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius, whatIsProp);
@@ -31,6 +32,7 @@ public class Ball : MonoBehaviour
         explosionParticle.transform.parent = null;
         explosionParticle.Play();
         explosionAudio.Play();
+
         Destroy(explosionParticle.gameObject, explosionParticle.duration);
         Destroy(gameObject);
     }
@@ -44,5 +46,10 @@ public class Ball : MonoBehaviour
         float damage = percentage * maxDamage;
         damage = Mathf.Max(0, damage);
         return damage;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.instance.OnBallDestroy();
     }
 }

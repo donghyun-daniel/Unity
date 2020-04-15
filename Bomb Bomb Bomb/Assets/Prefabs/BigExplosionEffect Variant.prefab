@@ -9,7 +9,8 @@ AudioSource:
   m_GameObject: {fileID: 8657031580905632144}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8160817802685613586, guid: a9c6232223083f345b06cb163b2b7b59,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 7e26c9daf4c32483b9c2790e662d3f1b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.183
@@ -105,7 +106,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
       propertyPath: m_Name
-      value: BigExplosionEffect
+      value: BigExplosionEffect Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4000010212820824, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
       propertyPath: m_LocalPosition.x

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Cannon : MonoBehaviour
 {
+    public CamFollow cam;
     public Rigidbody ball;
     public Transform firePos;
     public Slider powerSlider;
@@ -65,6 +66,7 @@ public class Cannon : MonoBehaviour
         shootingAudio.clip = fireClip;
         shootingAudio.Play();
         currentForce = minForce;
-        Debug.Log("Fire!");
+
+        cam.SetTarget(ballInstance.transform, CamFollow.State.Tracking);
     }
 }
