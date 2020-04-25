@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Booster.cs" />
     <Compile Include="Assets\Character.cs" />
+    <Compile Include="Assets\Messenger.cs" />
     <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\PlayerHealth.cs" />
     <Compile Include="Assets\RayInteraction.cs" />
@@ -76,6 +77,8 @@
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\UIManager.cs" />
+    <Compile Include="Assets\Util.cs" />
+    <Compile Include="Assets\Worker.cs" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/GitHub/Unity/Practice/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
