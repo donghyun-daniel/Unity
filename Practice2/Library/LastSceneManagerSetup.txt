@@ -1,5 +1,6 @@
 sceneSetups:
-- path: Assets/Scenes/SampleScene.unity
+- path: "C:/Users/tjdeh/OneDrive/\uBC14\uD0D5 \uD654\uBA74/Unity-TPS-Sample-master/Unity-TPS-Sample-master/TPS
+    Start Project/Assets/Scenes/Main.unity"
   isLoaded: 1
   isActive: 1
   isSubScene: 0
